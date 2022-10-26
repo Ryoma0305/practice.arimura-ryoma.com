@@ -1,48 +1,50 @@
 <?php
-$blog_query = new WP_Query(
-	array(
-		'post_type'      => 'blog',
-		'posts_per_page' => 3,
-	)
-);
-
+$post_type = 'room';
 ?>
 
 <?php get_header(); ?>
 </section>
 <main id="main">
-    <section class="blog">
-        <div class="ttl inner">
-            <div class="ttl section-ttl">
-                <h2 class="robot ttl-text1">BLOG</h2>
-                <p class="ttl-text2 notosans">What I think</p>
-            </div>
+    <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
+        <label for="s" class="assistive-text">検索</label>
+        <input type="text" class="field" name="s" id="s" placeholder="検索"/>
 
-            <!--
-            <h2 class="robot ttl-text1">BLOG</h2>
-            <p class="notosans ttl-text2">ブログ</p>
-            -->
-        </div>
+        <select name="placenum" style="margin-top:20px;">
+            <option value="" selected>間取りタイプ(カスタムタクソノミー)</option>
+            <?php
+            $taxonomy_name = 'place';
+            $taxonomys = get_terms($taxonomy_name);
+            if (!is_wp_error($taxonomys) && count($taxonomys)):
+                foreach ($taxonomys as $taxonomy):
+                    $tax_posts = get_posts(array('post_type' => $post_type , 'taxonomy' => $taxonomy_name, 'term' => $taxonomy->slug));
+                    if ($tax_posts):
+                        ?>
+                        <option value="<?php echo $taxonomy->slug; ?>"><?php echo $taxonomy->name; ?></option>
+                    <?php
+                    endif;
+                endforeach;
+            endif;
+            ?>
+        </select>
 
-        <?php if ($blog_query->have_posts()): ?>
-        <ul class="blog-content">
-        <?php while ($blog_query->have_posts()): $blog_query->the_post(); ?>
-            <li id="post-<?php the_ID(); ?>">
-                <p class="blog-image"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( '' ); ?></a></p>
-                <dl class="notosans">
-                    <dt><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dt>
-                    <dd><a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a></dd>
-                </dl>
-                <p class="viewmore"><a href="<?php the_permalink(); ?>">view more</a></p>
-            </li>
-        <?php endwhile; ?>
-        <?php else: ?>
-            <p>記事はありません。</p>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
-        </ul>
-        <p class="button-container robot"><a href="<?php echo esc_url(home_url('/blog')); ?>" class="button">MORE</a>
-        </p>
-    </section>
+        <div style="margin-top:20px">こだわり(タグ)</div>
+        <?php
+        $taxonomy_name = 'kodawari';
+        $taxonomys = get_terms($taxonomy_name);
+        if (!is_wp_error($taxonomys) && count($taxonomys)):
+            foreach ($taxonomys as $taxonomy):
+                $tax_posts = get_posts(array('post_type' => $post_type, 'taxonomy' => $taxonomy_name, 'term' => $taxonomy->slug));
+                if ($tax_posts):
+                    ?>
+                    <label><input type="checkbox" name="post_tag[]"
+                                  value="<?php echo $taxonomy->slug; ?>"><?php echo $taxonomy->name; ?></label><br>
+                <?php
+                endif;
+            endforeach;
+        endif;
+        ?>
+
+        <input type="submit" class="submit" name="submit" id="searchsubmit" value="検索"/>
+    </form>
 </main>
 <?php get_footer(); ?>
