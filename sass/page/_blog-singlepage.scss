@@ -1,0 +1,69 @@
+/* Scss Document */
+.blog-singlepage{
+	margin-bottom: 9.6rem;
+	display: flex;
+	justify-content: space-between;
+	@include sp{
+		display: block;
+	};
+}
+.blog-singlepage-content{
+	width: 70%;
+	line-height: 1.5;
+	@include sp{
+		width: 100%;
+	};
+	h2{
+		font-size: 2.8rem;
+		margin-bottom: 4rem;
+	}
+	h3{
+		font-size: 2.4rem;
+		margin-bottom: 4rem;
+	}
+	h4{
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+	}
+	p{
+		font-size: 1.6rem;
+		margin-bottom: 3rem;
+		line-height: 1.6;
+		&:first-of-type{
+			margin-bottom: 4rem;
+		}
+	}
+	&-image{
+		margin-bottom: 4rem;
+		width: 80%;
+	}
+}
+
+.blog-singlepage-sidebar{
+		width: 25%;
+		@include sp{
+			width: 100%;
+		};
+		&-ttl{
+			font-size: 2rem;
+			margin-bottom: 4rem;
+		}
+		ul{
+			list-style: none;
+			display: block;
+			li{
+				width: 100%;
+				margin-bottom: 3rem;
+				/*display: flex;
+				justify-content: space-between;*/
+			}
+		}
+	}
+
+
+.blog-sideber-image{
+	height: 11vw;
+	@include sp{
+		height: 46vw;
+	};
+}

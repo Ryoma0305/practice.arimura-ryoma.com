@@ -1,0 +1,342 @@
+/* Scss Document */
+.mainvisual-work{
+	background-color: #1D2426;
+
+}
+.haeder-main-lowerpage{
+	padding: 4rem 0;
+	margin-bottom: 10rem;
+	&-content{
+	
+	&-ttl{
+	font-size: 5.6rem;
+	border-bottom: 4px solid #fff;
+		padding-bottom: 1rem;
+		margin-right: 24px;
+	@include sp{
+		margin-bottom: 2rem;
+		margin-right: 0;
+}
+	}
+	
+}
+}
+.haeder-main-lowerpage-content{
+	display: flex;
+	align-items: center;
+	@include sp {
+    flex-direction: column;
+  }
+}
+
+.work-page-number{
+	display: flex;
+	align-items: center;
+	margin-bottom: 4rem;
+	p:first-of-type{
+		border: solid 1px $color-font-main;
+		width: 6.4rem;
+		margin-right: 1rem;
+	}
+	
+	p:nth-of-type(2){
+		font-size: 2.4rem;
+		font-weight: bold;
+	}
+	}
+.work-page{
+     margin: 0 auto;	
+	h2{
+		font-size: 2rem;
+		color: $color-font-main;
+		margin-bottom: 2rem;
+		font-weight: 400;
+	}
+	&-text{
+		color: $color-font-main;
+		font-size: 1.6rem;
+		border-bottom: 1px solid $color-font-main;
+		padding-bottom: 1.2rem;
+		margin-bottom: 1.6rem;
+		line-height: 1.6;
+		span{
+			display: block;
+		}
+	}
+	&-tool{
+		display: flex;
+		margin-bottom: 9.6rem;
+		font-size: 10px;
+		@include sp{
+			display: block;
+			font-size: 1.4rem;
+		};
+		
+
+	}
+	&-content{
+		margin-bottom: 4rem;
+		display: flex;
+		justify-content: space-between;
+		@include sp{
+			padding: 0;
+		};
+		&-image{
+			width: 70%;
+			margin-right: 1rem;
+		}
+	}
+}
+.work-page-content-image-sp{
+	width: 20%;
+}
+/*.work05-page-content .work-page-content-image-sp{
+	display: none;
+}*/
+.more-wrapper-work{
+	margin: 0 auto 10rem auto;
+	width: 14rem;
+	a{
+		text-decoration: none;
+		color: $color-headerbg;
+		padding: 0 .3em;
+  position: relative;
+    font-weight: 600;
+    opacity: .7;
+    transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
+	display: block;
+    &:after {
+        --scale: 0;
+
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 2px;
+        background: $color-sub;
+        transform: scaleX(var(--scale));
+        transform-origin: var(--x) 50%;
+        transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+    }
+
+    &:hover {
+        opacity: 1;
+		color: $color-sub;
+    }
+
+    &:hover:after {
+        --scale: 1;
+    }
+	}
+	&-text{
+		position: relative;
+		&:after{
+			font-family: "Font Awesome 5 Free";
+  content: "\f054";
+			position: absolute;
+			top: 0;
+			right: 0;
+			
+		}
+	}
+}
+/*.more-workpage{
+	text-align: center;
+	width: 20rem;
+}
+
+.more-wrapper{
+	width: 14rem;
+	a{
+		text-decoration: none;
+		color: $color-headerbg;
+		padding: 0 .3em;
+  position: relative;
+    font-weight: 600;
+    opacity: .7;
+    transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
+	display: block;
+    &:after {
+        --scale: 0;
+
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 2px;
+        background: $color-sub;
+        transform: scaleX(var(--scale));
+        transform-origin: var(--x) 50%;
+        transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+    }
+
+    &:hover {
+        opacity: 1;
+		color: $color-sub;
+    }
+
+    &:hover:after {
+        --scale: 1;
+    }
+	}
+	
+}
+.more{
+	font-size: 1.6rem;
+	width: 10rem;
+	margin-right: 1rem;
+	float: left;
+}
+.more-arrow{
+	float: right;
+}
+*/
+.work-page-review-ttl{
+	font-size: 16px;
+	@include sp {
+    font-size: 1.6rem;
+  }
+}
+
+
+.work-blueprint-text{
+	font-size: 16px;
+	margin-bottom: 1.6rem;
+	@include sp {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+.work-page-tool-ttl{
+	padding: 0.5em;
+  color: #494949;
+  border-left: solid 5px #7db4e6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 2rem;
+	@include sp {
+    margin-right: 0;
+		margin-bottom: 1.6rem;
+		background: #EDF1F4;
+  }
+}
+.work-page-tool-listwrap{
+	display: flex;
+	align-items: center;
+	@include sp {
+		flex-wrap: wrap;
+  }
+	
+}
+.work-page-tool-list{
+	width: 4vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-right: 3vw;
+	&:last-of-type{
+		margin-right: 0;
+	}
+	@include sp {
+    margin-right: 0;
+		width: 20%;
+		margin-bottom: 1.6rem;
+	
+  }
+	span{
+		margin-top: 0.8rem;
+	}
+	
+}
+.work-page-tool-list img{
+	width: auto;
+		height: 2vw;
+	@include sp {
+    height: 6vw;
+  }
+}
+
+
+.work-bg{
+	background: #EDF1F4;
+	padding: 8rem;
+	margin-bottom: 24px;
+	@include sp {
+	background-color: #fff;
+    padding: 0;
+	margin-bottom: 2.4rem;
+  }
+}
+
+
+.work-page-wrap{
+	display: flex;
+	@include sp {
+    flex-direction: column;
+  }
+}
+.work-page-flexwrap{
+	display: flex;
+}
+.work-page-reviewwrap{
+	@include sp {
+    margin-bottom: 4rem;
+  }
+}
+.work-page-review-ttl{
+	margin-bottom: 16px;
+	@include sp {
+    margin-bottom: 1.4rem;
+  }
+}
+
+.works-wrapper{
+	display: flex;
+	justify-content: space-between;
+	@include sp {
+    display: block;
+  }
+}
+.works-wrapper:nth-of-type(2){
+	display: flex;
+	@include sp {
+    display: block;
+  }
+}
+
+
+
+.work-box-wrap-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.work-box.work-service-box-service{
+	width: 100%;
+}
+
+
+
+.work-box-wrap3 .works-wrapper{
+	width: 16%;
+	@include sp {
+    width: 100%;
+  }
+}
+.work-box-content3 .work-box-content-image{
+		width: 48%;
+		margin: 0 auto;
+}
+
+.work-position-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}

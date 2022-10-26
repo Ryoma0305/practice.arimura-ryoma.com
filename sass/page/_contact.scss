@@ -1,0 +1,76 @@
+/* Scss Document */
+
+/* 必須マーク */
+.must{
+	color: #fff;
+	margin-right: 1rem;
+	padding: 0.6rem 1rem;
+	background: #F92931;
+	border-radius: 2rem;
+	margin-bottom: 4rem;
+}
+
+/* 任意マーク */
+.free {
+	color: #fff;
+	margin-right: 1rem;
+	padding: 0.6rem 1rem;
+	background: #424242;
+	border-radius: 2rem;
+}
+
+/* 項目名を太字にする */
+form p {
+	font-weight: 600;
+}
+
+/* 入力項目を見やすくする */
+input.wpcf7-form-control.wpcf7-text,
+textarea.wpcf7-form-control.wpcf7-textarea {
+	width: 100%;
+	padding: 0.8rem 0;
+	margin-right: 1rem;
+	margin-bottom: 4rem;
+	border: 1px solid #d0d5d8;
+	border-radius: 0.3rem;
+}
+textarea.wpcf7-form-control.wpcf7-textarea {
+	height: 20rem;
+}
+
+/* 必須項目の入力欄を黄色にする */
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+	background: rgba(255, 255, 142, 0.46);
+}
+
+/* 送信ボタンを見やすくする */
+input.wpcf7-submit {
+	height: 8rem;
+	background: #323232;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 600;
+	width: 100%;
+}
+
+/* エラーメッセージを見やすくする */
+span.wpcf7-not-valid-tip,
+.wpcf7-response-output.wpcf7-validation-errors {
+	color: red;
+	font-weight: 600;
+	margin-bottom: 4rem;
+	
+}
+
+input{
+	margin-top: 2rem;
+}
+
+textarea{
+	margin-top: 2rem;
+}
+
+.contact-page{
+	width: 70%;
+	margin: 0 auto 10rem auto;
+}

@@ -1,0 +1,130 @@
+.blog-archive {
+  /*display: flex;
+	justify-content: space-between;*/
+  width: 70%;
+  margin: 0 auto;
+  @include sp {
+    /*display: block;*/
+    width: 86%;
+  }
+  &-container {
+    width: 100%;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      @include sp {
+        display: block;
+      }
+      li {
+        width: 48%;
+        margin-bottom: 8rem;
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.blog-archive-sidebar-content-left {
+  /*width: 40%;*/
+}
+
+.blog-archive-sidebar-content-right {
+  /*width: 58%;*/
+  time {
+    font-size: 1.2rem;
+    a {
+      color: $color-font-main;
+      text-decoration: none;
+    }
+  }
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    a {
+      color: $color-font-main;
+      text-decoration: none;
+    }
+  }
+}
+
+.blog-archive-sidebar-content-right-time {
+  color: $color-font-main;
+}
+
+.blog-archive-sidebar-content-right-ttl {
+  color: $color-font-main;
+}
+
+.pagination {
+  clear: both;
+  padding: 20px 0;
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+}
+.pagination-box {
+  display: inline-block;
+}
+.pagination span,
+.pagination a {
+  display: block;
+  float: left;
+  margin: 2px 2px 2px 0;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  width: auto;
+  color: #fff; /* 通常の文字色 */
+  background: #47bea0; /* 通常の背景色 */
+}
+.pagination a:hover {
+  color: #47bea0; /* マウスホバー時の文字色 */
+  background: #f9d635; /* マウスホバー時の背景色 */
+}
+.pagination .current {
+  padding: 10px 15px 10px 15px;
+  color: #47bea0; /* 現在のページの文字色 */
+  background: #f9d635; /* 現在のページの背景色 */
+}
+@media only screen and (max-width: 413px) {
+  .pagination {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .pagination span,
+  .pagination a {
+    padding: 8px 10px 8px 10px;
+  }
+  .pagination .current {
+    padding: 8px 10px 8px 10px;
+  }
+}
+
+.p-blog_form-wrapper {
+  width: 86%;
+  margin: 0 auto;
+}
+
+.p-blog_search-group {
+  display: flex;
+  align-items: center;
+}
+
+.p-blog__input {
+  margin: 0;
+}
+
+.p-blog__no-post {
+  width: 86%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.blog-content {
+  margin-top: 40px;
+}

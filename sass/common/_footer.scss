@@ -1,0 +1,49 @@
+/* Scss Document */
+.footer{
+	height: 44rem;
+	background-color: $color-main;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&-text{
+		color: $color-font-white;
+		font-weight: bold;
+		font-size: 2.4rem;
+		margin-bottom: 4rem;
+		text-align: center;
+		@include sp{
+			font-size: 1.4rem;
+		};
+	}
+}
+
+.contact{
+	box-sizing: border-box;
+	width: 150px;
+	border: solid 2px $color-sub;
+	margin: 0 auto;
+	text-align: center;
+	&:hover{
+			background-color: $color-sub;
+			
+		}
+		
+	a{
+		color: #DDBC36;
+		text-decoration: none;
+		padding: 2rem 0;
+			display: block;
+		&:hover{
+			color: #fff;
+			opacity: 1;
+		}
+		
+	}
+}
+
+.button-footer{
+	border: 2px solid #DDBC36;
+  color: #DDBC36;
+}

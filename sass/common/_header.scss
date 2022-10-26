@@ -1,0 +1,255 @@
+/* Scss Document */
+/*ここからtoppageheader*/
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&-content{
+	width: 86%;
+	margin: 0 auto;
+		padding: 4rem 0;
+		display: block;
+		@include sp{
+			display: none;
+		};
+		&:after{
+			content: "";
+  display: block;
+  clear: both;
+		}
+		&-logo{
+			float: left;
+			@include sp{
+				font-size: 1.2rem;
+			};
+		a{
+			text-decoration: none;
+			color: $color-font-header;
+		}
+	}
+	}
+}
+
+.header-content-menu{
+	color: #fff;
+	float: right;
+	ul{
+		display: flex;
+	justify-content: space-between;
+	align-items: center;
+		width: 40rem;
+		
+		li{
+  text-decoration: none;
+			margin-left: 0;
+			display: block;
+			&:hover:after {
+  width: 100%;
+}
+		
+	a{
+	letter-spacing: 0.126em;
+	color: $color-font-header;
+	font-size: 1.6rem;
+		text-decoration: none;
+		padding: 0 .3em;
+  position: relative;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
+    &:after {
+        --scale: 0;
+
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 2px;
+        background: $color-sub;
+        transform: scaleX(var(--scale));
+        transform-origin: var(--x) 50%;
+        transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+    }
+
+    &:hover {
+       opacity: .7;
+    }
+
+    &:hover:after {
+        --scale: 1;
+    }
+	}
+	}
+}
+}
+/*ここからハンガーガーメニュー*/
+header {
+  padding:10px;
+  
+}
+
+.nav-drawer {
+  position: relative;
+	padding: 2rem 0;
+	display: none;
+	@include sp{
+		display: block;
+	};
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+right: 0;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #fff;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;/*最前面に*/
+  width: 76%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(105%);
+  transform: translateX(105%);/*左に隠しておく*/
+	ul{
+		padding: 5rem;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		align-content: space-around;
+		li{
+  text-decoration: none;
+			margin-left: 0;
+			display: block;
+			font-size: 2.6rem;
+			margin-bottom: 4rem;
+			&:hover:after {
+  width: 100%;
+}
+		
+	a{
+	letter-spacing: 0.126em;
+	color: $color-font-main;
+		text-decoration: none;
+		padding: 0 .3em;
+  position: relative;
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity .3s cubic-bezier(.51, .92, .24, 1);
+    &:after {
+        --scale: 0;
+
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 2px;
+        background: $color-sub;
+        transform: scaleX(var(--scale));
+        transform-origin: var(--x) 50%;
+        transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+    }
+
+    &:hover {
+       opacity: .7;
+    }
+
+    &:hover:after {
+        --scale: 1;
+    }
+	}
+	}
+	}
+}
+
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+
+
+
+
+#is-loading {
+ display: block;
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ background: #FFF;
+ z-index: 8;
+}
+#loading {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ width: 80px;
+ height: 80px;
+ margin-top: -40px;
+ margin-left: -40px;
+ text-align: center;
+ color: #fff;
+ z-index: 9;
+}

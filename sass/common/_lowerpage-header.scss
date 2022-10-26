@@ -1,0 +1,42 @@
+/* Scss Document */
+/*ここからtoppageheader*/
+.lowerpage-mainvisual{
+	margin-bottom: 9.6rem;
+}
+.lowerpage-header{
+	background-color: $color-main;
+	line-height: 11.1rem;
+	&-content{
+		display: flex;
+	justify-content: space-between;
+	width: 86%;
+	margin: 0 auto;
+		&-logo{
+		a{
+			text-decoration: none;
+			color: $color-font-white;
+		}
+	}
+	}
+}
+
+.lowerpage-header-content-menu{
+	
+	a{
+	letter-spacing: 0.126em;
+	color: $color-font-white;
+	text-decoration: none;
+	margin-left: 5.2rem;
+	font-size: 1.6rem;
+	}
+}
+
+/*ここまでtoppageheader*/
+
+
+
+
+
+
+
+

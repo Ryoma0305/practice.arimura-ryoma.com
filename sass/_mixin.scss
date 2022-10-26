@@ -1,0 +1,27 @@
+/* Scss Document */
+@mixin sp {
+  @media (max-width: ($breakpoint-sp)) {
+    @content;
+  }
+};
+
+@mixin center {
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+};
+
+@mixin inner{
+  width: 86%;
+  margin: 0 auto;
+}
+
+@mixin full{
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+}
+
+
+

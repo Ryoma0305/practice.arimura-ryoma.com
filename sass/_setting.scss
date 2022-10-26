@@ -1,0 +1,36 @@
+/* Scss Document */
+//$color-main: #1B1725;
+$color-main: #1D2426;
+//$color-sub:#B28850;
+$color-sub:#DDBC36;
+//$color-sub: #FF4F4F;
+//$color-sub:#7AD6BB;
+$color-accent: #7AD6BB;
+$color-red: #FF4F4F;
+$color-font-main: #646464;
+$color-font-sub: #5B5C5C;
+$color-font-header: #FFFFFF;
+$color-font-white: #FFFFFF;
+$color-headerbg: #202037;
+//$color-bg:#F2F0E8;
+$color-bg: #f8f8f8;
+$breakpoint-sp: 768px; 
+$breakpoint-ml: 1000px;
+$breakpoint-md: 800px;
+
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+
+
